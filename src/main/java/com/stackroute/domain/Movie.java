@@ -14,6 +14,12 @@ public class Movie {
         this.actor = actor;
     }
 
+    @Autowired
+    @Qualifier("actor3")
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+
     public Actor getActor() {
         return actor;
     }

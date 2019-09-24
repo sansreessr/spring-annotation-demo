@@ -12,7 +12,10 @@ public class Main
     public static void main( String[] args ) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Movie movie = context.getBean(Movie.class);
+        Movie movie = context.getBean("myMovie", Movie.class);
+        Movie movie1 = context.getBean("cinema", Movie.class);
         System.out.println(movie.getActor());
+        System.out.println(movie1.getActor());
+        System.out.println(movie==movie1);
     }
 }

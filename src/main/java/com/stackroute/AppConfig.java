@@ -1,8 +1,10 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Movie;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -37,5 +39,10 @@ public class AppConfig {
     @Bean(initMethod = "customInit", destroyMethod = "customDestroy")
     public BeanLifecycleDemoBean lCycle() {
         return new BeanLifecycleDemoBean();
+    }
+
+    @Bean
+    public BeanPostProcessorDemoBean postProcessor () {
+        return new BeanPostProcessorDemoBean();
     }
 }

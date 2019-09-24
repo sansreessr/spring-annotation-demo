@@ -1,4 +1,4 @@
-package com.stackroute.domain;
+package com.stackroute.demo;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;

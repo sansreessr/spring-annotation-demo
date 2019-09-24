@@ -15,7 +15,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Movie getMovie() {
+    public Movie movie() {
         return new Movie();
     }
 }

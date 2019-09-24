@@ -36,7 +36,7 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     @Override
     public void setApplicationContext(ApplicationContext context) throws BeansException {
         this.context = context;
-        System.out.println("Actor info from Movie class using ApplicationContextAware: " + factory.getBean("actor1"));
+        System.out.println("Actor info from Movie class using ApplicationContextAware: " + context.getBean("actor1"));
     }
 
     @Override

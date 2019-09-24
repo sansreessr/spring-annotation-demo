@@ -13,7 +13,5 @@ public class Main
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Movie movie = context.getBean("myMovie", Movie.class);
-        Movie movie1 = context.getBean("cinema", Movie.class);
-        System.out.println(movie.getActor());
     }
 }
